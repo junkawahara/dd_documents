@@ -1,9 +1,8 @@
 # Graph class in the TdZdd library
 
-This documents explains the usage of the Graph class in the [TdZdd](https://github.com/kunisura/TdZdd) library.
-An explanation is under construction.
+This documents explains the usage of the [Graph class](https://github.com/kunisura/TdZdd/blob/master/include/tdzdd/util/Graph.hpp) in the [TdZdd](https://github.com/kunisura/TdZdd) library.
 
-An example of an input graph.
+## Example of an input graph.
 
 graph1.txt
 
@@ -15,7 +14,18 @@ Dave Alice
 Alice Carol
 ```
 
-An example usage of the Graph class in TdZdd.
+One line represents one edge. We separate the names of both endpoints with a space character.
+The first line is edge number 0. The i-th line is edge number i+1.
+The number of edges is obtained with the ``edgeSize()`` member function.
+
+A vertex is represented by a string. In the example above, "Alice", "Bob", "Carol", and "Dave" are vertices.
+Each vertex is given a "vertex number. The vertex number is a number between 1 and n.
+Which vertex corresponds to which number is managed in the Graph class.
+The `getVertex` member function can be used to get the vertex number corresponding to a vertex (string) (see example usage below).
+The number of vertices is obtained with the ``vertexSize()`` member function.
+
+
+## Example usage of the Graph class in TdZdd.
 
 ```
 #include <tdzdd/DdSpec.hpp>
@@ -56,3 +66,18 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
+
+# Remark
+
+Note that when reading a graph from a text file, the numbers in the text are not necessarily the vertex numbers of the graph.
+For example, consider the following text file to be read.
+
+```
+0 1
+0 2
+1 2
+```
+
+This is a graph consisting of vertices "0", "1", and "2".
+The Vertex numbers are NOT 0, 1, or 2. The vertex number must be obtained by e.g. `graph.getVertex("0")`.
+(Vertex numbers 1, 2, and 3 are assigned to "0", "1" and "2", but which vertex number is assigned to which vertex is managed in the Graph class. It is necessary to check the correspondence by `getVertex`).
