@@ -55,3 +55,4 @@ SAPPOROBDD について最初に読むドキュメントとして[DDライブラ
 * [TdZdd を用いたネットワーク信頼性計算](https://github.com/junkawahara/reliability_tdzdd)
 * [dd_converter (TdZdd と graphillion 形式の相互変換)](https://github.com/junkawahara/dd_converter)
 * [SapporoTdZddApps: TdZdd と SAPPOROBDD の橋渡しライブラリ](https://github.com/hs-nazuna/SapporoTdZddApps)
+* [binary decision diagram (BDD) software libraries](https://github.com/johnyf/tool_lists/blob/main/bdd.md)（DDライブラリの網羅的リスト）
