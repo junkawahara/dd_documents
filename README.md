@@ -12,6 +12,11 @@ Zero-suppressed binary decision diagram (ZDD) を始めとする決定グラフ�
 
 → [SAPPOROBDD](https://github.com/Shin-ichi-Minato/SAPPOROBDD) & [TdZdd](https://github.com/kunisura/TdZdd) によって可能です。以下の「SAPPOROBDD & TdZdd 情報」のページを参考にしてください。
 
+* DD を用いたアルゴリズムについて知りたい。
+
+→ 資料 [部分グラフ集合を扱うDDアルゴリズム](dd_algorithms.pdf) や、書籍「[超高速グラフ列挙アルゴリズム－〈フカシギの数え方〉が拓く，組合せ問題への新アプローチ－](https://www.morikita.co.jp/books/mid/085261)」をご覧ください。
+[英語論文 (pdf)](https://www-alg.ist.hokudai.ac.jp/~thomas/TCSTR/tcstr_14_76/tcstr_14_76.pdf) もあります。
+
 ## graphillion 情報
 
 [graphillion](https://github.com/takemaru/graphillion) は集合族や部分グラフ集合を圧縮して活用するための Python ライブラリです。
@@ -22,8 +27,6 @@ Zero-suppressed binary decision diagram (ZDD) を始めとする決定グラフ�
 
 ## SAPPOROBDD & TdZdd 情報
 
-DD に関する概要は、書籍「[超高速グラフ列挙アルゴリズム－〈フカシギの数え方〉が拓く，組合せ問題への新アプローチ－](https://www.morikita.co.jp/books/mid/085261)」や、[フロンティア法解説講演資料](https://www.algo.cce.i.kyoto-u.ac.jp/jkawahara/frontier/)を参考にしてください。[英語論文 (pdf)](https://www-alg.ist.hokudai.ac.jp/~thomas/TCSTR/tcstr_14_76/tcstr_14_76.pdf) もあります。
-
 DD を用いたアルゴリズムの実装を始めるには、[dd_package](https://github.com/junkawahara/dd_package) が便利です。このパッケージでは、SAPPOROBDD や TdZdd、いくつか便利なライブラリをまとめてインストールできます。
 
 SAPPOROBDD について最初に読むドキュメントとして[DDライブラリ入門](dd_library_inst.pdf) があります。TdZdd は[解説論文](https://www.jstage.jst.go.jp/article/jssst/34/3/34_3_97/_article/-char/ja/) があります。以下の公式マニュアルがあります。
@@ -32,7 +35,10 @@ SAPPOROBDD について最初に読むドキュメントとして[DDライブラ
 * [SAPPOROBDD helper マニュアル](https://github.com/junkawahara/sbdd_helper)
 * [TdZdd ユーザガイド（英語）](http://kunisura.github.io/TdZdd/doc/index.html)
 
-フロンティア法の実装のサンプルコードは [frontier_basic_tdzdd](https://github.com/junkawahara/frontier_basic_tdzdd) にあります。
+フロンティア法の実装のサンプルコードはいくつかあります。
+* [frontier-basic](https://github.com/junkawahara/frontier-basic): 学習用サンプルコードです。効率は悪いため、本番で使用しないようにしてください。
+* [frontier_basic_tdzdd](https://github.com/junkawahara/frontier_basic_tdzdd): TdZdd を用いたフロンティア法の実装例です。こちらを用いてください。
+* [frontier](https://github.com/junkawahara/frontier): TdZdd を用いないフロンティア法の実装例です。こちらよりは frontier_basic_tdzdd をおすすめします。
 
 [DDの再帰演算のカタログ](dd_recur_function.pdf)に、各種再帰演算の SAPPOROBDD でのコード例が掲載されています。
 
