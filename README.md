@@ -4,17 +4,14 @@ Zero-suppressed binary decision diagram (ZDD) を始めとする決定グラフ�
 
 ## 目的別ナビゲーション
 
-* DD のアルゴリズムや実装の中身を知らずに、集合族の圧縮や、部分グラフ列挙を行いたい。
+- DD のアルゴリズムや実装の中身を知らずに、集合族の圧縮や、部分グラフ列挙を行いたい。
+    - [graphillion](https://github.com/takemaru/graphillion) を用いるのがお勧めです。以下の「graphillion 情報」の節を参考にしてください。
 
-→ [graphillion](https://github.com/takemaru/graphillion) を用いるのがお勧めです。以下の「graphillion 情報」の節を参考にしてください。
+- DD を用いたアルゴリズムの実装を行いたい。
+    - [SAPPOROBDD](https://github.com/Shin-ichi-Minato/SAPPOROBDD) & [TdZdd](https://github.com/kunisura/TdZdd) によって可能です。以下の「SAPPOROBDD & TdZdd 情報」の節を参考にしてください。
 
-* DD を用いたアルゴリズムの実装を行いたい。
-
-→ [SAPPOROBDD](https://github.com/Shin-ichi-Minato/SAPPOROBDD) & [TdZdd](https://github.com/kunisura/TdZdd) によって可能です。以下の「SAPPOROBDD & TdZdd 情報」の節を参考にしてください。
-
-* DD を用いたアルゴリズムについて知りたい。
-
-→ 資料 [部分グラフ集合を扱うDDアルゴリズム](dd_algorithms.pdf) や、書籍「[超高速グラフ列挙アルゴリズム－〈フカシギの数え方〉が拓く，組合せ問題への新アプローチ－](https://www.morikita.co.jp/books/mid/085261)」をご覧ください。
+- DD を用いたアルゴリズムについて知りたい。
+    - 資料 [部分グラフ集合を扱うDDアルゴリズム](dd_algorithms.pdf) や、書籍「[超高速グラフ列挙アルゴリズム－〈フカシギの数え方〉が拓く，組合せ問題への新アプローチ－](https://www.morikita.co.jp/books/mid/085261)」をご覧ください。
 [英語論文 (pdf)](https://www-alg.ist.hokudai.ac.jp/~thomas/TCSTR/tcstr_14_76/tcstr_14_76.pdf) もあります。
 
 ## graphillion 情報
@@ -34,7 +31,7 @@ Zero-suppressed binary decision diagram (ZDD) を始めとする決定グラフ�
 
 ### DD を用いたアルゴリズムの実装を始めるには
 
-[dd_package](https://github.com/junkawahara/dd_package) : このパッケージでは、SAPPOROBDD や TdZdd、いくつか便利なライブラリをまとめてインストールできます。
+* [dd_package](https://github.com/junkawahara/dd_package) : このパッケージでは、SAPPOROBDD や TdZdd、いくつか便利なライブラリをまとめてインストールできます。
 
 ### 公式マニュアル
 
@@ -49,6 +46,10 @@ Zero-suppressed binary decision diagram (ZDD) を始めとする決定グラフ�
 * [frontier-basic](https://github.com/junkawahara/frontier-basic): 学習用サンプルコードです。効率は悪いため、本番で使用しないようにしてください。
 * [frontier_basic_tdzdd](https://github.com/junkawahara/frontier_basic_tdzdd): TdZdd を用いたフロンティア法の実装例です。こちらを用いてください。
 * [frontier](https://github.com/junkawahara/frontier): TdZdd を用いないフロンティア法の実装例です。こちらよりは frontier_basic_tdzdd をおすすめします。
+
+### FAQ
+
+* [DD ライブラリに関する FAQ](faq.md)
 
 ### その他ドキュメント
 
