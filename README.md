@@ -1,4 +1,4 @@
-# ZDD の実装に関する情報
+# 決定グラフ（DD）の処理系に関する情報
 
 Zero-suppressed binary decision diagram (ZDD) を始めとする決定グラフ（DD）の処理系に関する情報を提供するページです。
 
@@ -6,11 +6,11 @@ Zero-suppressed binary decision diagram (ZDD) を始めとする決定グラフ�
 
 * DD のアルゴリズムや実装の中身を知らずに、集合族の圧縮や、部分グラフ列挙を行いたい。
 
-→ [graphillion](https://github.com/takemaru/graphillion) を用いるのがお勧めです。以下の「graphillion 情報」のページを参考にしてください。
+→ [graphillion](https://github.com/takemaru/graphillion) を用いるのがお勧めです。以下の「graphillion 情報」の節を参考にしてください。
 
 * DD を用いたアルゴリズムの実装を行いたい。
 
-→ [SAPPOROBDD](https://github.com/Shin-ichi-Minato/SAPPOROBDD) & [TdZdd](https://github.com/kunisura/TdZdd) によって可能です。以下の「SAPPOROBDD & TdZdd 情報」のページを参考にしてください。
+→ [SAPPOROBDD](https://github.com/Shin-ichi-Minato/SAPPOROBDD) & [TdZdd](https://github.com/kunisura/TdZdd) によって可能です。以下の「SAPPOROBDD & TdZdd 情報」の節を参考にしてください。
 
 * DD を用いたアルゴリズムについて知りたい。
 
@@ -27,24 +27,32 @@ Zero-suppressed binary decision diagram (ZDD) を始めとする決定グラフ�
 
 ## SAPPOROBDD & TdZdd 情報
 
-DD を用いたアルゴリズムの実装を始めるには、[dd_package](https://github.com/junkawahara/dd_package) が便利です。このパッケージでは、SAPPOROBDD や TdZdd、いくつか便利なライブラリをまとめてインストールできます。
+### 入門ドキュメント
 
-SAPPOROBDD について最初に読むドキュメントとして[DDライブラリ入門](dd_library_inst.pdf) があります。TdZdd は[解説論文](https://www.jstage.jst.go.jp/article/jssst/34/3/34_3_97/_article/-char/ja/) があります。以下の公式マニュアルがあります。
+* [DDライブラリ入門](dd_library_inst.pdf) : SAPPOROBDD、SAPPOROBDD helper の入門ドキュメント
+* [TdZdd の解説論文](https://www.jstage.jst.go.jp/article/jssst/34/3/34_3_97/_article/-char/ja/) : TdZdd の入門ドキュメント
+
+### DD を用いたアルゴリズムの実装を始めるには
+
+[dd_package](https://github.com/junkawahara/dd_package) : このパッケージでは、SAPPOROBDD や TdZdd、いくつか便利なライブラリをまとめてインストールできます。
+
+### 公式マニュアル
 
 * [SAPPOROBDD マニュアル](https://github.com/Shin-ichi-Minato/SAPPOROBDD/raw/main/man/BDD%2B.pdf) パッケージの SAPPOROBDD/man/BDD+.pdf に入っています。
 * [SAPPOROBDD helper マニュアル](https://github.com/junkawahara/sbdd_helper)
 * [TdZdd ユーザガイド（英語）](http://kunisura.github.io/TdZdd/doc/index.html)
 
+### サンプルコード
+
 フロンティア法の実装のサンプルコードはいくつかあります。
+
 * [frontier-basic](https://github.com/junkawahara/frontier-basic): 学習用サンプルコードです。効率は悪いため、本番で使用しないようにしてください。
 * [frontier_basic_tdzdd](https://github.com/junkawahara/frontier_basic_tdzdd): TdZdd を用いたフロンティア法の実装例です。こちらを用いてください。
 * [frontier](https://github.com/junkawahara/frontier): TdZdd を用いないフロンティア法の実装例です。こちらよりは frontier_basic_tdzdd をおすすめします。
 
-[DDの再帰演算のカタログ](dd_recur_function.pdf)に、各種再帰演算の SAPPOROBDD でのコード例が掲載されています。
+### その他ドキュメント
 
-
-## その他ドキュメント
-
+* [DDの再帰演算のカタログ](dd_recur_function.pdf) : 各種再帰演算の SAPPOROBDD でのコード例が掲載されています。
 * [BDD バイナリ形式](formats/bdd_binary_format.md)
 * [graphillion 形式](formats/graphillion_format.md)
 * [TdZdd の Graph クラスについて](formats/tdzdd_graph_ja.md)
